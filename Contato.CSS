@@ -1,0 +1,309 @@
+body {
+  background-color: white;
+  font-family: 'Quicksand', sans-serif;
+  margin: 0px;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #1fe049;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #000000;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: rgb(255, 255, 255);
+  border: 2px;
+  top: 0;
+  position: sticky;
+  z-index: 1;
+  height: 60px;
+}
+
+.icon {
+  float: left;
+  display: block;
+  color: black;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid rgba(255, 255, 255, 0);
+  border-radius: 5px;
+  text-align: left;
+  padding: 18px;
+  text-decoration: none;
+  list-style-type: none;
+  z-index: initial;
+  transition: 1s
+}
+
+.icon:hover {
+  background-color: #111111;
+  color: white;
+  border: 2px solid #111111;
+  border-radius: 5px;
+}
+
+.logo {
+  width: 100px;
+  height: auto;
+  float: left;
+  border: none;
+  border-radius: 0px;
+}
+
+.logo :hover {
+  filter: grayscale(100%);
+}
+
+.topnav .link {
+  float: left;
+  display: block;
+  color: black;
+  border: 2px solid rgba(255, 255, 255, 0);
+  border-radius: 5px;
+  text-align: left;
+  padding: 16px;
+  text-decoration: none;
+  list-style-type: none;
+  z-index: initial;
+  transition: 1s
+}
+
+.topnav .link:hover {
+  background-color: #111111;
+  color: white;
+  border: 2px solid #111111;
+  border-radius: 5px;
+}
+
+.topnav #active {
+  color: black;
+  background-color: #1fe049;
+  border: 2px solid #1fe049;
+  border-radius: 5px;
+}
+
+.topnav #contato {
+  float: right;
+  color: black;
+  background-color: #1fe049;
+  border: 2px solid #1fe049;
+  border-radius: 5px;
+}
+
+.icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {
+    display: none;
+  }
+
+  .icon {
+    float: right;
+    display: block;
+  }
+}
+
+.cover {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.cover-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.cover a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.cover a:hover,
+.cover a:focus {
+  color: #f1f1f1;
+}
+
+.cover .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .cover a {
+    font-size: 20px
+  }
+
+  .cover .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+/* topnav ends here */
+* {
+  box-sizing: border-box;
+}
+
+.map {
+  position: relative;
+  margin: 20px;
+  float: right;
+}
+
+/* Style inputs */
+input[type=text],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Style the container/contact section */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+/* Create two columns that float next to eachother */
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 15px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+
+  .column,
+  input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+
+/* footer starts here */
+.footer {
+  text-align: left;
+  width: 100%;
+  color: white;
+  border: 2px solid rgb(140, 140, 140);
+  border-radius: 5px;
+  background-color: rgb(130, 130, 130);
+  overflow: hidden;
+  margin: auto;
+  padding: 10px;
+}
+
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa {
+  text-align: center;
+  text-decoration: none;
+}
+
+.fa-facebook {
+  color: white;
+  font-size: 25px;
+  margin: 5px 2px;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.fa-envelope-o {
+  color: white;
+  font-size: 25px;
+  margin: 5px 2px;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.fa-instagram {
+  color: white;
+  margin: 5px 2px;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.coisas {
+  list-style-type: none;
+}
+
+.leftie {
+  float: right;
+  color: white;
+  margin: 0 auto;
+  list-style-type: none;
+  padding: 20px;
+}
+
+.rights {
+  float: none;
+  list-style-type: none;
+  margin-left: 30%;
+}

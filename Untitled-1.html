@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+    background-color: white;
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #1fe049;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #000000;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: rgb(148, 148, 148);
+    border: 2px;
+    top: 10px;
+    position: sticky;
+    z-index: 1;
+}
+
+.icon {
+  float: left;
+  display: block;
+  color: black;
+  border: 2px solid rgba(255, 255, 255, 0);
+  border-radius: 5px;
+  text-align: left;
+  padding: 16px;
+  text-decoration: none;
+  list-style-type: none;
+  z-index: initial;
+  transition: 1s
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+    float: left;
+    border: none;
+    border-radius: 0px;
+}
+.logo :hover {
+    filter: grayscale(100%);
+}
+
+.topnav .link {
+    float: left;
+    display: block;
+    color: black;
+    border: 2px solid rgba(255, 255, 255, 0);
+    border-radius: 5px;
+    text-align: left;
+    padding: 17px;
+    text-decoration: none;
+    list-style-type: none;
+    z-index: initial;
+    transition: 1s
+}
+
+.topnav .link:hover {
+    background-color: #111111;
+    color: white;
+    border: 2px solid #111111;
+    border-radius: 5px;
+}
+
+.topnav #active {
+    color: black;
+    background-color: #1fe049;
+    border: 2px solid #1fe049;
+    border-radius: 5px;
+}
+
+.topnav #contato {
+    float: right;
+}
+
+.icon {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {
+        display: none;
+    }
+
+    .icon {
+        float: right;
+        display: block;
+    }
+}
+
+.cover {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.cover-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.cover a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.cover a:hover, .cover a:focus {
+  color: #f1f1f1;
+}
+
+.cover .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .cover a {font-size: 20px}
+  .cover .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+</style>
+</head>
+<body>
+
+  <div class="topnav" id="myTopnav">
+    <a class="logo" id="logo" href="Reciclar.html"><img class="logo"  src="logo-02.jpg" alt="logo"></a>
+    <a class="link" href="./Reciclar.html">Home</a>
+    <a class="link" href="./Sobre.html">Sobre</a>
+    <a class="link" href="./PVB.html">PVB</a>
+    <a class="link" href="./info.html" id="active"> Mais</a>
+    <a class="link" id="contato" href="./Contato.html">Contato</a>
+  <button class="icon" onclick="openNav()">&#9776; <i class="fa fa-bars"></i></button>
+  </div>
+
+<div id="thenav" class="cover">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="cover-content">
+    <a hhref="./Reciclar.html">Home</a>
+    <a href="./Sobre.html">Sobre</a>
+    <a href="./PVB.html">PVB</a>
+    <a href="./info.html">Mais</a>
+    <a href="./Contato.html">Contato</a>
+  </div>
+</div>
+
+
+<script>
+function openNav() {
+  document.getElementById("thenav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("thenav").style.width = "0%";
+}
+</script>
+    <!-- This is the end of the topnav -->
+  <br>
+  <div class="row">
+    <div class="column">
+      <div class="about">
+        <h1>A Reciclar</h1>
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatibus maxime atque cum dicta vel
+          nesciunt itaque doloribus modi alias tenetur sequi optio quam nemo laudantium, blanditiis architecto fuga
+          voluptate rerum. Molestiae, eaque minima. Molestiae, corporis. Sapiente maiores quod laudantium earum placeat
+          magni cum in perspiciatis blanditiis facere ratione, aspernatur ducimus sunt animi nobis error? Est animi
+          obcaecati cumque minus.</p>
+      </div>
+    </div>
+    <br>
+    <img style="filter: contrast(140%);" class="foto" src="aterro.jpg" alt="vidro">
+    <!-- makin it esier to read -->
+    <br>
+    <div class="column">
+      <div class="more">
+        <h1>Lorem ipsum</h1>
+        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque illo ratione odit optio temporibus
+          doloribus, dolorem unde nihil quas, amet debitis quibusdam natus placeat excepturi omnis sed ut tempore quasi?
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- just to make it esier to read -->
+  <footer class="footer">
+    <p class="coisas"> <a href="#" class="fa fa-facebook"></a>facebook</p>
+    <p class="coisas"> <a href="https://www.instagram.com/reciclar_residuos"
+        class="fa fa-instagram"></a>@reciclar_residuos </p>
+    <p class="coisas"> <a href="mailto:reciclar@reciclar.net.br" class="fa fa-envelope-o"></a>reciclar@reciclar.net.br
+    </p>
+    <br>
+    <br>
+    <p class="rights"> All rights reserved Reciclar Residuos Limitada &reg;</p>
+  </footer>
+</body>
+
+</html>
